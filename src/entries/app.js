@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reducer from '../reducers/index';
 import Header from '../pages/components/header';
+import NotFound from '../pages/components/not-found';
+
 import { Map as map } from 'immutable';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
@@ -55,6 +57,7 @@ render(
         <Header/>
         <Route exact path="/" component={Home}/>
         <Route exact path="/videos" component={Videos}/>
+        <Route component={NotFound}/>
       </Fragment>
     </Provider>
   </BrowserRouter>
